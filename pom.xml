@@ -29,6 +29,8 @@
     </scm>
     <properties>
         <java.version>21</java.version>
+        <!-- retirar errores en categoriaservice -->
+        <lombok.version>1.18.48</lombok.version> 
         <maven.compiler.release>21</maven.compiler.release>
     </properties>
     <dependencies>
@@ -104,6 +106,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
+        
+        <dependency>
+            <groupId>com.google.firebase</groupId>
+            <artifactId>firebase-admin</artifactId>
+            <version>9.5.0</version>
+        </dependency>
+        
     </dependencies>
     
     <build>
