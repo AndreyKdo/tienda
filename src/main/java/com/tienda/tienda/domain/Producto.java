@@ -19,7 +19,7 @@ public class Producto implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_producto")
     private Integer idProducto;
-    private Integer idCategoria;
+    //private Integer idCategoria; // ya no se usa por la asociacion ManyToOne
 
     @Column(nullable = false, length = 50)
     @NotBlank(message = "La descripción no puede estar vacía.")
@@ -43,4 +43,8 @@ public class Producto implements Serializable {
 
     @Column(nullable = false)
     private boolean activo = true;
+    
+    @ManyToOne
+    @JoinColumn(name = "id_categoria")
+    private Categoria categoria;
 }
